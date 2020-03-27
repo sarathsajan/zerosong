@@ -1,0 +1,19 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+	<br>
+	<br>
+	<br>
+	<br>
+	<br>
+	<div class='jumbotron' style="color: #000000;">
+		<h1 style="text-align: left;">It would be nice if you could tell us</h1>
+		{% from 'includes/_formhelpers.html' import render_field %}
+		<form method="POST" action="">
+			<div class="form-group" style="text-align: left;">
+			{{render_field(form.name, class_="form-control")}}
+			</div>
+			<p><input type="submit" class="btn btn-primary" value="Submit"></p>
+		</form>
+	</div>
+{% endblock %}

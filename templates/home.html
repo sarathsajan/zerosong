@@ -1,0 +1,42 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+<style type="text/css">
+	ul > li
+	{
+		display: inline-block;
+	}
+</style>
+<div>
+	<h1>Welcome</h1>
+	<br>
+	<h6>Are you a song buff ?</h6>
+	<br>
+	<h6>Can you identify songs by hearing a short background score of that song ?</h6>
+	<br>
+	<h6>Then jump right in and show off your prized talent !!!</h6>
+	<br>
+	<h1>▼</h1>
+</div>
+<div style="padding-left: 0px" class="container text-center">
+	<ul>
+		<li>
+			<div style="background-color: #007bff; border-radius: 5px;">
+			<h1><a href="/register/" style='font-size: x-large; text-decoration: none; color: #FFFFFF;'>Start</a></h1>
+			</div>
+		</li>
+		<li>
+			<div style="background-color: #ffc107; border-radius: 5px;">
+			<h1><a href="/register/" style='font-size: x-large; text-decoration: none; color: #FFFFFF;'>HighScore</a></h1>
+			</div>
+		</li>
+		<li>
+			<div style="background-color: #12D456; border-radius: 5px;">
+			<h1><a href="whatsapp://send?text=Can you identify songs by hearing a short background score of that song ?
+				
+				https://zerosong.pythonanywhere.com" data-action="share/whatsapp/share" style='font-size: x-large; text-decoration: none; color: #FFFFFF;'>Share</a></h1>
+			</div>
+		</li>
+	</ul>
+</div>
+{% endblock %}

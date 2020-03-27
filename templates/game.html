@@ -1,0 +1,32 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+	{% from 'includes/_formhelpers.html' import render_field %}
+	<div class="text-center">
+		<h2 style="color: #F5F5F5;">Can you recognise this song?</h2>
+		<br>
+		<audio src="/static/songs/{{ i }}.mp3" controls autoplay></audio>
+		<br>
+		<br>
+	</div>
+	
+	<div class="text-center" style="border-radius: 5px; background-color: #4CAF50; padding: 3%;">
+		<form method="POST" action="" autocomplete="off">
+			<div class="form-group">
+				{{render_field(form.name, list="song_name", class_="form-control", placeholder="type song name here")}}
+			</div>
+			<p><input type="submit" class="btn btn-primary" value="Submit"></p>
+			<datalist id = "song_name">
+				{% for song in songs %}
+					<option value="{{ song['name'] }}">
+				{% endfor %}
+			</datalist>
+		</form>
+		<a href="/gameclue">
+			<button style="background-color: #FFEB3B;" class="btn" value="Clue">Clue</button>
+		</a>
+	</div>
+	<div class="jumbotron text-center" style="margin-top: 5%; background-color: #ff5252; padding: 1%;">
+		<h6>Your score</h6><h1>{{ score }}</h1>
+	</div>
+{% endblock %}

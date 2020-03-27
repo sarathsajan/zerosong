@@ -1,0 +1,37 @@
+{% extends 'layout.html' %}
+
+{% block body %}
+	<h1>Game Over</h1>
+	<br>
+	<br>
+	<p>Your final score</p>
+	<h3>{{ final_score }}</h3>
+	<br>
+	<br>
+	<a href="whatsapp://send?text=Hey, I found this cool website where you have to guess the name of the song and I scored {{ final_score }} points. Can you beat me?
+				
+				https://zerosong.pythonanywhere.com" data-action="share/whatsapp/share">
+		<button style="background-color: #12D456; border-radius: 5px;" class="btn" value="Share">Share On WhatsApp</button>
+	</a>
+	<br>
+	<br>
+	<a href="/register">
+		<button style="background-color: #FFEB3B;" class="btn" value="Reatart">Restart</button>
+	</a>
+	<br>
+	<br>
+	<img width=100%vw src="/static/meme/{{ category }}/{{ reaction }}.jpg">
+	<br>
+	<br>
+	<div style="text-align: left">
+		You got this <a href="{{ yturl }}">SONG</a> wrong !!!
+		<br>
+		Song : {{ song_name }}
+		<br>
+		Film : {{ film_name }}
+		<br>
+		Year : {{ release_year }}
+		<br>
+		<br>
+	</div>
+{% endblock %}
